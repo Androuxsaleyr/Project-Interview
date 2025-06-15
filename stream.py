@@ -60,5 +60,13 @@ input_data = pd.DataFrame([{
 
 # Predict button
 if st.button("Predict Churn"):
+    input_data.columns = [
+    'Customer Status_encoded',
+    'Device Protection Plan_encoded',
+    'Internet Service_encoded',
+    'Internet Type_encoded',
+    'Multiple Lines_encoded',
+    # ... (use the exact list of columns from training)
+]
     prediction = model.predict(input_data)[0]
     st.success(f"Predicted Churn: {'Yes' if prediction == 1 else 'No'}")
