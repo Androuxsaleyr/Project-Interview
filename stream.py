@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 
 # Load model
-with open("random_forest_model.pkl", "rb") as f:
+with open("model_clean.pkl", "rb") as f:
     model = pickle.load(f)
 
 st.markdown("<h1 style='color:#2E86C1;'>Telco Churn Prediction</h1>", unsafe_allow_html=True)
